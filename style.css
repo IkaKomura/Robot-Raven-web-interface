@@ -3,7 +3,12 @@
   height: 0px;
   padding-top: 20px;
 }
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('Quicksand-VariableFont_wght.ttf');
+
+@font-face {
+  font-family: "Quicksand";
+  src: url( 'Quicksand-VariableFont_wght.ttf');
+}
 
 body {
  font-family: 'Quicksand', sans-serif;
@@ -31,12 +36,12 @@ h3 {font-size: 18px;}
 }
 
 
-.container-wrap {
+.main_container-wrap {
   display: flex;
   justify-content: center;
 }
 
-.container {
+.main_container {
   width: 90vw;
   min-width: 600px;
   background: dimgrey /*url(texture.png) repeat;*/;
@@ -132,6 +137,7 @@ h1 {
     border-radius: 5px;
     border: none;
     color: white;
+    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -205,11 +211,12 @@ h1 {
   
 
   .animation-button {
-    background: linear-gradient(to bottom, #fff0b3, #f7dc6f);
+    background: linear-gradient(to bottom, #f0ff4d, #cda400);
     cursor: pointer;
     border: none;
     outline: none;
     padding: 10px 20px;
+    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
