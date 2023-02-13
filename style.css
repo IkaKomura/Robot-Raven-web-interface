@@ -1,0 +1,241 @@
+.header {
+  background-color: transparent;
+  height: 0px;
+  padding-top: 20px;
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+ font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+  color: rgba(0, 0, 0, 0.8);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {font-weight: bold; letter-spacing: 1px;}
+h1 {font-size: 36px;}
+h2 {font-size: 28px;}
+h3 {font-size: 22px;}
+a {text-decoration: none; color: #3498db;}
+p {line-height: 1.5; margin-bottom: 1rem;}
+
+@media (max-width: 767px) {
+body {font-size: 14px;}
+h1 {font-size: 32px;}
+h2 {font-size: 24px;}
+h3 {font-size: 18px;}
+}
+
+
+.container-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90vw;
+  min-width: 600px;
+  background: dimgrey url(texture.png) repeat;
+  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2), 0 12px 40px 0 rgba(255, 255, 255, 0.2), 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  border: 2px black;
+  border-radius: 5px;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+
+h1 {
+  text-shadow: 1px 1px #333333;
+}
+
+/*sliders*/
+
+
+.slider-grid {
+  display: grid;
+  font-size: 12px; /* adjust the font size of the slider */
+  grid-template-columns: repeat(3, 1fr); /* create a grid with 3 columns of equal width /
+  grid-gap: 20px; / add some gap between the columns */
+  }
+
+
+
+.slider {
+  display: flex;
+  width: calc(33.33% - 5px); /* set the width of each slider to be 33.33% of the container, with a 20px gap */
+  max-width: 500px; /* set the maximum width of the slider to 300px */
+  min-width: 150px; /* set the minimum width of the slider to 150px */
+  height: 20px; /* adjust the height of the slider */
+  margin: 20px auto; /* center the slider horizontally and add some space at the bottom */
+ 
+
+  -webkit-appearance: none; /* remove the default appearance of the slider */
+  background: lightgray; /* set the background color to transparent */
+  outline: none; /* remove the outline */
+  border: 2px solid gray; /* add a border to the slider */
+  border-radius: 20px; /* add rounded corners to the slider */
+  }
+
+
+
+.slider-thumb {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* remove the default appearance of the thumb */
+  width: 20px; /* adjust the width of the thumb */
+  height: 20px; /* adjust the height of the thumb */
+  background: darkgrey; /* set the background color of the thumb */
+  border-radius: 50%; /* make the thumb circular */
+  cursor: pointer; /* add a cursor */
+}
+
+@media (max-width: 800px) {
+  .slider-grid {
+  grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .slider {
+  width: calc(50% - 20px);
+  }
+  }
+  
+  /*And change it to 1 column on even smaller screens:*/
+  
+  @media (max-width: 600px) {
+  .slider-grid {
+  grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .slider {
+  width: calc(100% - 20px);
+  }
+  }
+
+  .reset-button {
+    grid-column: span 3; /* set the column span of the button to 3 */
+    background: linear-gradient(to bottom right, #ff9f1c, #e76f00);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: fit-content;
+    height: fit-content;
+    min-width: 80px;
+    min-height: 40px;
+    margin: 20px auto; /* center the button horizontally and add some space at the bottom */
+    }
+  
+  .reset-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+  }
+  
+  .reset-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+/*animation presets*/
+
+  #animations {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .button-container {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+  }
+  
+  @media (max-width: 720px) {
+    .button-container {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+  
+  .animation-frame {
+    width: calc(100% - 20px);
+    border: 1px solid gray;
+    margin: 10px;
+    flex-basis: calc(33.33% - 20px);
+    position: relative;
+    padding-bottom: 75%;
+  }
+  
+  .lottie-animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+  }
+  
+  
+  @media (max-width: 720px) {
+    .animation-frame {
+      flex-basis: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 420px) {
+    .animation-frame {
+      flex-basis: 100%;
+    }
+  }
+  
+
+  .animation-button {
+    background: linear-gradient(to bottom, #fff0b3, #f7dc6f);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .animation-button.active {
+    background: linear-gradient(to bottom right, #7cbc2b, #21963e);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .animation-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+  }
+  
+  .animation-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .animation-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+  }
+  
+  .animation-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
